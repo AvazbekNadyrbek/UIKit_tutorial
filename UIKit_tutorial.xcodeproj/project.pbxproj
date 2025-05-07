@@ -14,7 +14,7 @@
 		4B6A6FC52DC8B53600419FCD /* Exceptions for "UIKit_tutorial" folder in "UIKit_tutorial" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
-				Info.plist,
+				Resources/Info.plist,
 			);
 			target = 4B6A6FAF2DC8B53500419FCD /* UIKit_tutorial */;
 		};
@@ -147,7 +147,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = KKJFR977W3;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = UIKit_tutorial/Info.plist;
+				INFOPLIST_FILE = UIKit_tutorial/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -175,7 +175,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = KKJFR977W3;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = UIKit_tutorial/Info.plist;
+				INFOPLIST_FILE = UIKit_tutorial/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
