@@ -7,23 +7,51 @@
 
 import UIKit
 
+
+
 class DelegateDesignViewController: UIViewController {
+    
+    private var actionButtonView = ActionButtonView()
+    
+    private var textLabel = UILabel()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        view.backgroundColor = .systemGroupedBackground
+        
+        view.addSubview(actionButtonView)
+        actionButtonView.layer.shadowColor = UIColor.black.cgColor
+        actionButtonView.translatesAutoresizingMaskIntoConstraints = false
+        actionButtonView.widthAnchor.constraint(equalToConstant: 300).isActive = true
+        actionButtonView.heightAnchor.constraint(equalToConstant: 300).isActive = true
+        actionButtonView.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        actionButtonView.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
+        actionButtonView.layer.cornerRadius = 16
+        
+        actionButtonView.delegate = self
+        
+        view.addSubview(textLabel)
+        textLabel.translatesAutoresizingMaskIntoConstraints = false
+        textLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        textLabel.topAnchor.constraint(equalTo: actionButtonView.bottomAnchor, constant: 20).isActive = true
+        
+        textLabel.text = "Primary action button Tapped"
+        textLabel.isHidden = false
+        
+    }
+}
+ 
+extension DelegateDesignViewController: ActionButtonViewDelegate {
+    func onPrimatyTap() {
+        print("Degubg: Primary Button Tapped in View Controller!")
+        textLabel.isHidden = false
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func onSecondaryTap() {
+        print("Degubg: Secondary Button Tapped in View Controller!")
+        textLabel.isHidden = true
     }
-    */
-
+    
+    
 }
